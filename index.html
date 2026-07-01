@@ -620,7 +620,7 @@
 <div id="loading-screen">
   <div class="loader-ring"></div>
   <div class="loader-text">Analyzing Your Plan...</div>
-  <div class="loader-sub">Comparing against 31 benchmarked groups</div>
+  <div class="loader-sub">Comparing against 69 benchmarked groups</div>
 </div>
 
 <!-- ══ REPORT ════════════════════════════════════════════ -->
@@ -824,7 +824,7 @@ async function runGrader() {
   const ls = document.getElementById('loading-screen');
   ls.style.display='flex';
 
-  const prompt = `You are a senior employee benefits consultant at The Benefits Group, a boutique benefits brokerage in Franklin, Tennessee specializing in small to mid-size companies. You have benchmark data from 31 actual client groups you have placed.
+  const prompt = `You are a senior employee benefits consultant at The Benefits Group, a boutique benefits brokerage in Franklin, Tennessee specializing in small to mid-size companies. You have benchmark data from 69 actual client groups you have placed.
 
 PROSPECT DATA:
 Company: ${company}
@@ -854,7 +854,7 @@ Individual Deductible: avg $${bench.IndivDed.avg} (range $${bench.IndivDed.min}�
 Individual OOP Max: avg $${bench.IndivOOP.avg} (range $${bench.IndivOOP.min}–$${bench.IndivOOP.max})
 ${bench.count<=2?'NOTE: Limited data for this size band — reference ALL benchmark below as primary.':''}
 
-ALL 31 GROUPS: EE Only avg $${allB.EEOnly.avg} | Family avg $${allB.Family.avg} | ER Contrib avg ${allB.ERContribPctEE.avg}% | Indiv Ded avg $${allB.IndivDed.avg} | Indiv OOP avg $${allB.IndivOOP.avg}
+ALL 69 GROUPS: EE Only avg $${allB.EEOnly.avg} | Family avg $${allB.Family.avg} | ER Contrib avg ${allB.ERContribPctEE.avg}% | Indiv Ded avg $${allB.IndivDed.avg} | Indiv OOP avg $${allB.IndivOOP.avg}
 
 GRADING RUBRIC:
 COST: Compare EE Only rate to benchmark avg. A=15%+ below avg, B=within 10%, C=10-20% above, D=20-35% above, F=35%+ above.
